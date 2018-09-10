@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7F17483213981E3002A8A4E /* MethodTraceConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7F17482213981E3002A8A4E /* MethodTraceConfig.plist */; };
+		E7F1748D213981E3002A8A4E /* libMobikeHookDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7F1748C213981E3002A8A4E /* libMobikeHookDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E7F17492213981E3002A8A4E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F17491213981E3002A8A4E /* JavaScriptCore.framework */; };
+		E7F17494213981E3002A8A4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F17493213981E3002A8A4E /* Foundation.framework */; };
+		E7F17496213981E3002A8A4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F17495213981E3002A8A4E /* UIKit.framework */; };
+		E7F1749B213981E3002A8A4E /* MobikeHookDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7F1749A213981E3002A8A4E /* MobikeHookDylib.mm */; };
+		E7F1749E213981E3002A8A4E /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F1749D213981E3002A8A4E /* LLDBTools.h */; };
+		E7F174A0213981E3002A8A4E /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7F1749F213981E3002A8A4E /* LLDBTools.mm */; };
+		E7F174A3213981E3002A8A4E /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F174A2213981E3002A8A4E /* ANYMethodLog.h */; };
+		E7F174A5213981E3002A8A4E /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F174A4213981E3002A8A4E /* ANYMethodLog.m */; };
+		E7F174A7213981E3002A8A4E /* MethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F174A6213981E3002A8A4E /* MethodTrace.h */; };
+		E7F174A9213981E3002A8A4E /* MethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F174A8213981E3002A8A4E /* MethodTrace.m */; };
+		E7F174AE213981E3002A8A4E /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F174AD213981E3002A8A4E /* AntiAntiDebug.m */; };
+		E7F174B1213981E3002A8A4E /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = E7F174B0213981E3002A8A4E /* fishhook.c */; };
+		E7F174B3213981E3002A8A4E /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F174B2213981E3002A8A4E /* fishhook.h */; };
+		E7F174B5213981E3002A8A4E /* MobikeHookDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F174B4213981E3002A8A4E /* MobikeHookDylib.h */; };
+		E7F174B7213981E3002A8A4E /* MobikeHookDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F174B6213981E3002A8A4E /* MobikeHookDylib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7F1748E213981E3002A8A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F1746F213981E3002A8A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F1748B213981E3002A8A4E;
+			remoteInfo = MobikeHookDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7F17477213981E3002A8A4E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7F1748D213981E3002A8A4E /* libMobikeHookDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E7F1747A213981E3002A8A4E /* MobikeHook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobikeHook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F1747D213981E3002A8A4E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E7F1747E213981E3002A8A4E /* Target.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Target.plist; sourceTree = "<group>"; };
+		E7F17480213981E3002A8A4E /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "quick-resign.sh"; path = "Scripts/quick-resign.sh"; sourceTree = "<group>"; };
+		E7F17482213981E3002A8A4E /* MethodTraceConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MethodTraceConfig.plist; path = Config/MethodTraceConfig.plist; sourceTree = "<group>"; };
+		E7F17485213981E3002A8A4E /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
+		E7F17486213981E3002A8A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F1748C213981E3002A8A4E /* libMobikeHookDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMobikeHookDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F17491213981E3002A8A4E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E7F17493213981E3002A8A4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E7F17495213981E3002A8A4E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E7F17499213981E3002A8A4E /* MobikeHookDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = MobikeHookDylib.xm; path = Logos/MobikeHookDylib.xm; sourceTree = "<group>"; };
+		E7F1749A213981E3002A8A4E /* MobikeHookDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MobikeHookDylib.mm; path = Logos/MobikeHookDylib.mm; sourceTree = "<group>"; };
+		E7F1749D213981E3002A8A4E /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LLDBTools.h; path = Tools/LLDBTools.h; sourceTree = "<group>"; };
+		E7F1749F213981E3002A8A4E /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = LLDBTools.mm; path = Tools/LLDBTools.mm; sourceTree = "<group>"; };
+		E7F174A2213981E3002A8A4E /* ANYMethodLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = MethodTrace/ANYMethodLog.h; sourceTree = "<group>"; };
+		E7F174A4213981E3002A8A4E /* ANYMethodLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = MethodTrace/ANYMethodLog.m; sourceTree = "<group>"; };
+		E7F174A6213981E3002A8A4E /* MethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MethodTrace.h; path = MethodTrace/MethodTrace.h; sourceTree = "<group>"; };
+		E7F174A8213981E3002A8A4E /* MethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MethodTrace.m; path = MethodTrace/MethodTrace.m; sourceTree = "<group>"; };
+		E7F174AB213981E3002A8A4E /* MobikeHookDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobikeHookDylib-Prefix.pch"; sourceTree = "<group>"; };
+		E7F174AD213981E3002A8A4E /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
+		E7F174B0213981E3002A8A4E /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		E7F174B2213981E3002A8A4E /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		E7F174B4213981E3002A8A4E /* MobikeHookDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobikeHookDylib.h; sourceTree = "<group>"; };
+		E7F174B6213981E3002A8A4E /* MobikeHookDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobikeHookDylib.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7F17474213981E3002A8A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F17489213981E3002A8A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F17492213981E3002A8A4E /* JavaScriptCore.framework in Frameworks */,
+				E7F17496213981E3002A8A4E /* UIKit.framework in Frameworks */,
+				E7F17494213981E3002A8A4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7F1746E213981E3002A8A4E = {
+			isa = PBXGroup;
+			children = (
+				E7F1747C213981E3002A8A4E /* MobikeHook */,
+				E7F17497213981E3002A8A4E /* MobikeHookDylib */,
+				E7F17490213981E3002A8A4E /* Frameworks */,
+				E7F1747B213981E3002A8A4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7F1747B213981E3002A8A4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1747A213981E3002A8A4E /* MobikeHook.app */,
+				E7F1748C213981E3002A8A4E /* libMobikeHookDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7F1747C213981E3002A8A4E /* MobikeHook */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1747D213981E3002A8A4E /* icon.png */,
+				E7F1747E213981E3002A8A4E /* Target.plist */,
+				E7F17486213981E3002A8A4E /* Info.plist */,
+				E7F1747F213981E3002A8A4E /* Scripts */,
+				E7F17481213981E3002A8A4E /* Config */,
+				E7F17484213981E3002A8A4E /* TargetApp */,
+			);
+			path = MobikeHook;
+			sourceTree = "<group>";
+		};
+		E7F1747F213981E3002A8A4E /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17480213981E3002A8A4E /* quick-resign.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		E7F17481213981E3002A8A4E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17482213981E3002A8A4E /* MethodTraceConfig.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		E7F17484213981E3002A8A4E /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17485213981E3002A8A4E /* put ipa or app here */,
+			);
+			name = TargetApp;
+			sourceTree = "<group>";
+		};
+		E7F17490213981E3002A8A4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17491213981E3002A8A4E /* JavaScriptCore.framework */,
+				E7F17493213981E3002A8A4E /* Foundation.framework */,
+				E7F17495213981E3002A8A4E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7F17497213981E3002A8A4E /* MobikeHookDylib */ = {
+			isa = PBXGroup;
+			children = (
+				E7F174B4213981E3002A8A4E /* MobikeHookDylib.h */,
+				E7F174B6213981E3002A8A4E /* MobikeHookDylib.m */,
+				E7F17498213981E3002A8A4E /* Logos */,
+				E7F1749C213981E3002A8A4E /* Tools */,
+				E7F174A1213981E3002A8A4E /* MethodTrace */,
+				E7F174AC213981E3002A8A4E /* AntiAntiDebug */,
+				E7F174AF213981E3002A8A4E /* fishhook */,
+				E7F174AA213981E3002A8A4E /* Supporting Files */,
+			);
+			path = MobikeHookDylib;
+			sourceTree = "<group>";
+		};
+		E7F17498213981E3002A8A4E /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17499213981E3002A8A4E /* MobikeHookDylib.xm */,
+				E7F1749A213981E3002A8A4E /* MobikeHookDylib.mm */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
+		E7F1749C213981E3002A8A4E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1749D213981E3002A8A4E /* LLDBTools.h */,
+				E7F1749F213981E3002A8A4E /* LLDBTools.mm */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		E7F174A1213981E3002A8A4E /* MethodTrace */ = {
+			isa = PBXGroup;
+			children = (
+				E7F174A2213981E3002A8A4E /* ANYMethodLog.h */,
+				E7F174A4213981E3002A8A4E /* ANYMethodLog.m */,
+				E7F174A6213981E3002A8A4E /* MethodTrace.h */,
+				E7F174A8213981E3002A8A4E /* MethodTrace.m */,
+			);
+			name = MethodTrace;
+			sourceTree = "<group>";
+		};
+		E7F174AA213981E3002A8A4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7F174AB213981E3002A8A4E /* MobikeHookDylib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7F174AC213981E3002A8A4E /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				E7F174AD213981E3002A8A4E /* AntiAntiDebug.m */,
+			);
+			name = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		E7F174AF213981E3002A8A4E /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				E7F174B0213981E3002A8A4E /* fishhook.c */,
+				E7F174B2213981E3002A8A4E /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E7F1748A213981E3002A8A4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F1749E213981E3002A8A4E /* LLDBTools.h in Headers */,
+				E7F174A7213981E3002A8A4E /* MethodTrace.h in Headers */,
+				E7F174A3213981E3002A8A4E /* ANYMethodLog.h in Headers */,
+				E7F174B5213981E3002A8A4E /* MobikeHookDylib.h in Headers */,
+				E7F174B3213981E3002A8A4E /* fishhook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E7F17479213981E3002A8A4E /* MobikeHook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F174BD213981E3002A8A4E /* Build configuration list for PBXNativeTarget "MobikeHook" */;
+			buildPhases = (
+				E7F17473213981E3002A8A4E /* Sources */,
+				E7F17474213981E3002A8A4E /* Frameworks */,
+				E7F17475213981E3002A8A4E /* ShellScript */,
+				E7F17476213981E3002A8A4E /* Resources */,
+				E7F17477213981E3002A8A4E /* CopyFiles */,
+				E7F17478213981E3002A8A4E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7F1748F213981E3002A8A4E /* PBXTargetDependency */,
+			);
+			name = MobikeHook;
+			productName = MobikeHook;
+			productReference = E7F1747A213981E3002A8A4E /* MobikeHook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7F1748B213981E3002A8A4E /* MobikeHookDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F174BA213981E3002A8A4E /* Build configuration list for PBXNativeTarget "MobikeHookDylib" */;
+			buildPhases = (
+				E7F17487213981E3002A8A4E /* ShellScript */,
+				E7F17488213981E3002A8A4E /* Sources */,
+				E7F17489213981E3002A8A4E /* Frameworks */,
+				E7F1748A213981E3002A8A4E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobikeHookDylib;
+			productName = MobikeHookDylib;
+			productReference = E7F1748C213981E3002A8A4E /* libMobikeHookDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7F1746F213981E3002A8A4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = dabao;
+				TargetAttributes = {
+					E7F17479213981E3002A8A4E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E7F1748B213981E3002A8A4E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = E7F17472213981E3002A8A4E /* Build configuration list for PBXProject "MobikeHook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E7F1746E213981E3002A8A4E;
+			productRefGroup = E7F1747B213981E3002A8A4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7F17479213981E3002A8A4E /* MobikeHook */,
+				E7F1748B213981E3002A8A4E /* MobikeHookDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7F17476213981E3002A8A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F17483213981E3002A8A4E /* MethodTraceConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E7F17475213981E3002A8A4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		E7F17478213981E3002A8A4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		E7F17487213981E3002A8A4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7F17473213981E3002A8A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F17488213981E3002A8A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F174A9213981E3002A8A4E /* MethodTrace.m in Sources */,
+				E7F174B7213981E3002A8A4E /* MobikeHookDylib.m in Sources */,
+				E7F174AE213981E3002A8A4E /* AntiAntiDebug.m in Sources */,
+				E7F1749B213981E3002A8A4E /* MobikeHookDylib.mm in Sources */,
+				E7F174A5213981E3002A8A4E /* ANYMethodLog.m in Sources */,
+				E7F174B1213981E3002A8A4E /* fishhook.c in Sources */,
+				E7F174A0213981E3002A8A4E /* LLDBTools.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7F1748F213981E3002A8A4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F1748B213981E3002A8A4E /* MobikeHookDylib */;
+			targetProxy = E7F1748E213981E3002A8A4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E7F174B8213981E3002A8A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E7F174B9213981E3002A8A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7F174BB213981E3002A8A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobikeHookDylib/MobikeHookDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libMobikeHookDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"MobikeHookDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-framework",
+					Cycript,
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		E7F174BC213981E3002A8A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobikeHookDylib/MobikeHookDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libMobikeHookDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"MobikeHookDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7F174BE213981E3002A8A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MobikeHook/Info.plist;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = dabao.MobikeHook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7F174BF213981E3002A8A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MobikeHook/Info.plist;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = dabao.MobikeHook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7F17472213981E3002A8A4E /* Build configuration list for PBXProject "MobikeHook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F174B8213981E3002A8A4E /* Debug */,
+				E7F174B9213981E3002A8A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F174BA213981E3002A8A4E /* Build configuration list for PBXNativeTarget "MobikeHookDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F174BB213981E3002A8A4E /* Debug */,
+				E7F174BC213981E3002A8A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F174BD213981E3002A8A4E /* Build configuration list for PBXNativeTarget "MobikeHook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F174BE213981E3002A8A4E /* Debug */,
+				E7F174BF213981E3002A8A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7F1746F213981E3002A8A4E /* Project object */;
+}

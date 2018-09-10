@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7149707213C3248001D4C9B /* MethodTraceConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7149706213C3248001D4C9B /* MethodTraceConfig.plist */; };
+		E7149711213C3248001D4C9B /* libAnti2AntiDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7149710213C3248001D4C9B /* libAnti2AntiDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E7149716213C3248001D4C9B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7149715213C3248001D4C9B /* JavaScriptCore.framework */; };
+		E7149718213C3248001D4C9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7149717213C3248001D4C9B /* Foundation.framework */; };
+		E714971A213C3248001D4C9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7149719213C3248001D4C9B /* UIKit.framework */; };
+		E714971F213C3248001D4C9B /* Anti2AntiDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = E714971E213C3248001D4C9B /* Anti2AntiDylib.mm */; };
+		E7149722213C3248001D4C9B /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E7149721213C3248001D4C9B /* LLDBTools.h */; };
+		E7149724213C3248001D4C9B /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7149723213C3248001D4C9B /* LLDBTools.mm */; };
+		E7149727213C3248001D4C9B /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = E7149726213C3248001D4C9B /* ANYMethodLog.h */; };
+		E7149729213C3248001D4C9B /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E7149728213C3248001D4C9B /* ANYMethodLog.m */; };
+		E714972B213C3248001D4C9B /* MethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = E714972A213C3248001D4C9B /* MethodTrace.h */; };
+		E714972D213C3248001D4C9B /* MethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E714972C213C3248001D4C9B /* MethodTrace.m */; };
+		E7149732213C3248001D4C9B /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = E7149731213C3248001D4C9B /* AntiAntiDebug.m */; };
+		E7149735213C3248001D4C9B /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = E7149734213C3248001D4C9B /* fishhook.c */; };
+		E7149737213C3248001D4C9B /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = E7149736213C3248001D4C9B /* fishhook.h */; };
+		E7149739213C3248001D4C9B /* Anti2AntiDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = E7149738213C3248001D4C9B /* Anti2AntiDylib.h */; };
+		E714973B213C3248001D4C9B /* Anti2AntiDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = E714973A213C3248001D4C9B /* Anti2AntiDylib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7149712213C3248001D4C9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E71496F3213C3248001D4C9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E714970F213C3248001D4C9B;
+			remoteInfo = Anti2AntiDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E71496FB213C3248001D4C9B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7149711213C3248001D4C9B /* libAnti2AntiDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E71496FE213C3248001D4C9B /* Anti2Anti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anti2Anti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7149701213C3248001D4C9B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E7149702213C3248001D4C9B /* Target.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Target.plist; sourceTree = "<group>"; };
+		E7149704213C3248001D4C9B /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "quick-resign.sh"; path = "Scripts/quick-resign.sh"; sourceTree = "<group>"; };
+		E7149706213C3248001D4C9B /* MethodTraceConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MethodTraceConfig.plist; path = Config/MethodTraceConfig.plist; sourceTree = "<group>"; };
+		E7149709213C3248001D4C9B /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
+		E714970A213C3248001D4C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7149710213C3248001D4C9B /* libAnti2AntiDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libAnti2AntiDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7149715213C3248001D4C9B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E7149717213C3248001D4C9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E7149719213C3248001D4C9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E714971D213C3248001D4C9B /* Anti2AntiDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = Anti2AntiDylib.xm; path = Logos/Anti2AntiDylib.xm; sourceTree = "<group>"; };
+		E714971E213C3248001D4C9B /* Anti2AntiDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = Anti2AntiDylib.mm; path = Logos/Anti2AntiDylib.mm; sourceTree = "<group>"; };
+		E7149721213C3248001D4C9B /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LLDBTools.h; path = Tools/LLDBTools.h; sourceTree = "<group>"; };
+		E7149723213C3248001D4C9B /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = LLDBTools.mm; path = Tools/LLDBTools.mm; sourceTree = "<group>"; };
+		E7149726213C3248001D4C9B /* ANYMethodLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = MethodTrace/ANYMethodLog.h; sourceTree = "<group>"; };
+		E7149728213C3248001D4C9B /* ANYMethodLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = MethodTrace/ANYMethodLog.m; sourceTree = "<group>"; };
+		E714972A213C3248001D4C9B /* MethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MethodTrace.h; path = MethodTrace/MethodTrace.h; sourceTree = "<group>"; };
+		E714972C213C3248001D4C9B /* MethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MethodTrace.m; path = MethodTrace/MethodTrace.m; sourceTree = "<group>"; };
+		E714972F213C3248001D4C9B /* Anti2AntiDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Anti2AntiDylib-Prefix.pch"; sourceTree = "<group>"; };
+		E7149731213C3248001D4C9B /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
+		E7149734213C3248001D4C9B /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		E7149736213C3248001D4C9B /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		E7149738213C3248001D4C9B /* Anti2AntiDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anti2AntiDylib.h; sourceTree = "<group>"; };
+		E714973A213C3248001D4C9B /* Anti2AntiDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Anti2AntiDylib.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E71496F8213C3248001D4C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E714970D213C3248001D4C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7149716213C3248001D4C9B /* JavaScriptCore.framework in Frameworks */,
+				E714971A213C3248001D4C9B /* UIKit.framework in Frameworks */,
+				E7149718213C3248001D4C9B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E71496F2213C3248001D4C9B = {
+			isa = PBXGroup;
+			children = (
+				E7149700213C3248001D4C9B /* Anti2Anti */,
+				E714971B213C3248001D4C9B /* Anti2AntiDylib */,
+				E7149714213C3248001D4C9B /* Frameworks */,
+				E71496FF213C3248001D4C9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E71496FF213C3248001D4C9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E71496FE213C3248001D4C9B /* Anti2Anti.app */,
+				E7149710213C3248001D4C9B /* libAnti2AntiDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7149700213C3248001D4C9B /* Anti2Anti */ = {
+			isa = PBXGroup;
+			children = (
+				E7149701213C3248001D4C9B /* icon.png */,
+				E7149702213C3248001D4C9B /* Target.plist */,
+				E714970A213C3248001D4C9B /* Info.plist */,
+				E7149703213C3248001D4C9B /* Scripts */,
+				E7149705213C3248001D4C9B /* Config */,
+				E7149708213C3248001D4C9B /* TargetApp */,
+			);
+			path = Anti2Anti;
+			sourceTree = "<group>";
+		};
+		E7149703213C3248001D4C9B /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E7149704213C3248001D4C9B /* quick-resign.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		E7149705213C3248001D4C9B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E7149706213C3248001D4C9B /* MethodTraceConfig.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		E7149708213C3248001D4C9B /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				E7149709213C3248001D4C9B /* put ipa or app here */,
+			);
+			name = TargetApp;
+			sourceTree = "<group>";
+		};
+		E7149714213C3248001D4C9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7149715213C3248001D4C9B /* JavaScriptCore.framework */,
+				E7149717213C3248001D4C9B /* Foundation.framework */,
+				E7149719213C3248001D4C9B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E714971B213C3248001D4C9B /* Anti2AntiDylib */ = {
+			isa = PBXGroup;
+			children = (
+				E7149738213C3248001D4C9B /* Anti2AntiDylib.h */,
+				E714973A213C3248001D4C9B /* Anti2AntiDylib.m */,
+				E714971C213C3248001D4C9B /* Logos */,
+				E7149720213C3248001D4C9B /* Tools */,
+				E7149725213C3248001D4C9B /* MethodTrace */,
+				E7149730213C3248001D4C9B /* AntiAntiDebug */,
+				E7149733213C3248001D4C9B /* fishhook */,
+				E714972E213C3248001D4C9B /* Supporting Files */,
+			);
+			path = Anti2AntiDylib;
+			sourceTree = "<group>";
+		};
+		E714971C213C3248001D4C9B /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				E714971D213C3248001D4C9B /* Anti2AntiDylib.xm */,
+				E714971E213C3248001D4C9B /* Anti2AntiDylib.mm */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
+		E7149720213C3248001D4C9B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E7149721213C3248001D4C9B /* LLDBTools.h */,
+				E7149723213C3248001D4C9B /* LLDBTools.mm */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		E7149725213C3248001D4C9B /* MethodTrace */ = {
+			isa = PBXGroup;
+			children = (
+				E7149726213C3248001D4C9B /* ANYMethodLog.h */,
+				E7149728213C3248001D4C9B /* ANYMethodLog.m */,
+				E714972A213C3248001D4C9B /* MethodTrace.h */,
+				E714972C213C3248001D4C9B /* MethodTrace.m */,
+			);
+			name = MethodTrace;
+			sourceTree = "<group>";
+		};
+		E714972E213C3248001D4C9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E714972F213C3248001D4C9B /* Anti2AntiDylib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7149730213C3248001D4C9B /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				E7149731213C3248001D4C9B /* AntiAntiDebug.m */,
+			);
+			name = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		E7149733213C3248001D4C9B /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				E7149734213C3248001D4C9B /* fishhook.c */,
+				E7149736213C3248001D4C9B /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E714970E213C3248001D4C9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7149722213C3248001D4C9B /* LLDBTools.h in Headers */,
+				E714972B213C3248001D4C9B /* MethodTrace.h in Headers */,
+				E7149727213C3248001D4C9B /* ANYMethodLog.h in Headers */,
+				E7149739213C3248001D4C9B /* Anti2AntiDylib.h in Headers */,
+				E7149737213C3248001D4C9B /* fishhook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E71496FD213C3248001D4C9B /* Anti2Anti */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7149741213C3248001D4C9B /* Build configuration list for PBXNativeTarget "Anti2Anti" */;
+			buildPhases = (
+				E71496F7213C3248001D4C9B /* Sources */,
+				E71496F8213C3248001D4C9B /* Frameworks */,
+				E71496F9213C3248001D4C9B /* ShellScript */,
+				E71496FA213C3248001D4C9B /* Resources */,
+				E71496FB213C3248001D4C9B /* CopyFiles */,
+				E71496FC213C3248001D4C9B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7149713213C3248001D4C9B /* PBXTargetDependency */,
+			);
+			name = Anti2Anti;
+			productName = Anti2Anti;
+			productReference = E71496FE213C3248001D4C9B /* Anti2Anti.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E714970F213C3248001D4C9B /* Anti2AntiDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E714973E213C3248001D4C9B /* Build configuration list for PBXNativeTarget "Anti2AntiDylib" */;
+			buildPhases = (
+				E714970B213C3248001D4C9B /* ShellScript */,
+				E714970C213C3248001D4C9B /* Sources */,
+				E714970D213C3248001D4C9B /* Frameworks */,
+				E714970E213C3248001D4C9B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anti2AntiDylib;
+			productName = Anti2AntiDylib;
+			productReference = E7149710213C3248001D4C9B /* libAnti2AntiDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E71496F3213C3248001D4C9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = dabao;
+				TargetAttributes = {
+					E71496FD213C3248001D4C9B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E714970F213C3248001D4C9B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = E71496F6213C3248001D4C9B /* Build configuration list for PBXProject "Anti2Anti" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E71496F2213C3248001D4C9B;
+			productRefGroup = E71496FF213C3248001D4C9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E71496FD213C3248001D4C9B /* Anti2Anti */,
+				E714970F213C3248001D4C9B /* Anti2AntiDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E71496FA213C3248001D4C9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7149707213C3248001D4C9B /* MethodTraceConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E71496F9213C3248001D4C9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		E71496FC213C3248001D4C9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		E714970B213C3248001D4C9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E71496F7213C3248001D4C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E714970C213C3248001D4C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E714973B213C3248001D4C9B /* Anti2AntiDylib.m in Sources */,
+				E714972D213C3248001D4C9B /* MethodTrace.m in Sources */,
+				E7149732213C3248001D4C9B /* AntiAntiDebug.m in Sources */,
+				E714971F213C3248001D4C9B /* Anti2AntiDylib.mm in Sources */,
+				E7149729213C3248001D4C9B /* ANYMethodLog.m in Sources */,
+				E7149735213C3248001D4C9B /* fishhook.c in Sources */,
+				E7149724213C3248001D4C9B /* LLDBTools.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7149713213C3248001D4C9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E714970F213C3248001D4C9B /* Anti2AntiDylib */;
+			targetProxy = E7149712213C3248001D4C9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E714973C213C3248001D4C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E714973D213C3248001D4C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E714973F213C3248001D4C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anti2AntiDylib/Anti2AntiDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libAnti2AntiDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"Anti2AntiDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-framework",
+					Cycript,
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		E7149740213C3248001D4C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anti2AntiDylib/Anti2AntiDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libAnti2AntiDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"Anti2AntiDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7149742213C3248001D4C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Anti2Anti/Info.plist;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = dabao.Anti2Anti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7149743213C3248001D4C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ADP58H4CZ;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Anti2Anti/Info.plist;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = dabao.Anti2Anti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E71496F6213C3248001D4C9B /* Build configuration list for PBXProject "Anti2Anti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E714973C213C3248001D4C9B /* Debug */,
+				E714973D213C3248001D4C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E714973E213C3248001D4C9B /* Build configuration list for PBXNativeTarget "Anti2AntiDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E714973F213C3248001D4C9B /* Debug */,
+				E7149740213C3248001D4C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7149741213C3248001D4C9B /* Build configuration list for PBXNativeTarget "Anti2Anti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7149742213C3248001D4C9B /* Debug */,
+				E7149743213C3248001D4C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E71496F3213C3248001D4C9B /* Project object */;
+}
